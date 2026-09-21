@@ -46,15 +46,15 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Élements réalisés
 
-- **à compléter**
+- Tout les éléments.
 
 ### TD 01 - Bonus réalisés
 
-- **à compléter**
+- Les deux bonus.
 
 ### TD 01 - Élements non réalisés
 
-- **à compléter**
+- NEANT
 
 ### TD 01 - Difficultés rencontrées + Solutions appliquées
 
@@ -62,7 +62,7 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- Génération des mocks de tweets
 
 ## TD 02
 
