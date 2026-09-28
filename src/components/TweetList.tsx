@@ -14,12 +14,14 @@ function TweetList({ tweets }: TweetListProps) {
         <>
             <p>Nombre total de tweets : {tweets.length}</p>
             <section>
-                {sortedTweets.map((tweet) => (
-                    <TweetPreview key={tweet.id} tweet={tweet} />
-                ))}
+                {sortedTweets.map((tweet) => (<TweetPreview key={tweet.id} tweet={tweet} />
+            ))}
             </section>
         </>
     );
 }
 
 export default TweetList;
+
+
+// map fonction annonyme qui permet d'itérer sur les différents objets, le but etant d'aficher un seul et meme item sur tweet preview C'est grace à l'item qu'on crée le tweet preview. 
