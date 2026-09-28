@@ -4,15 +4,20 @@ import './App.css'
 import { Outlet } from 'react-router'
 
 function App() {
-
   return (
-      <section id="center">
-        <h1>Bienvenue sur le fil d'actualités</h1>
+    <div>
+      <header>
+        <h1>XYZ</h1>
         <p>Découvrez les tweets des personnalitéss.</p>
+      </header>
+
+      <main>
         <Outlet />
         <TweetList tweets={initialTweets} />
-      </section>
-  )
+      </main>
+    </div>
+  );
 }
+
 
 export default App

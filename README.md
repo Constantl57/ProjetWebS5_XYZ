@@ -107,3 +107,8 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 ### TD 03 - Déclaration d'usage de l'IA générative
 
 - **à compléter**
+
+
+Dependances :
+
+-bun add react-router-dom

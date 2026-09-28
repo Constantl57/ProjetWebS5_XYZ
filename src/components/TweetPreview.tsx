@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { JSX } from "react/jsx-runtime";
 import type { Tweet } from "../types/Tweet";
 import Avatar from "./Avatar";
+import { Link } from "react-router-dom";
 
 const CONTENT_LIMIT = 180;
 
@@ -19,11 +20,14 @@ function TweetPreview({ tweet }: TweetPreviewProps): JSX.Element {
 
     return (
         <article>
+            <Link to={`/tweets/${tweet.id}`}> Voir la discution </Link>
             <Avatar name={tweet.authorName} />
             <h2>{tweet.authorName}</h2>
             <p>@{tweet.authorHandle}</p>
             {tweet.image && (
-                <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt} />
+                <Link to ={`/tweets/${tweet.id}`}>
+                    <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt} />
+                </Link>
             )}
             <p>{new Date(tweet.createdAt).toLocaleString()}</p>
             <p>{displayedContent}</p>
