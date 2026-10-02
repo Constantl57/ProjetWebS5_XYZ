@@ -1,7 +1,5 @@
-import { initialTweets } from './data/tweets'
-import TweetList from './components/TweetList'
 import './App.css'
-import { Outlet } from 'react-router'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
@@ -13,7 +11,6 @@ function App() {
 
       <main>
         <Outlet />
-        <TweetList tweets={initialTweets} />
       </main>
     </div>
   );

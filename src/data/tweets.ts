@@ -1,5 +1,6 @@
 import type {Tweet} from '../types/Tweet';
 
+
 export const initialTweets: Tweet[] = [
   {
     id: "1",
@@ -14,6 +15,7 @@ export const initialTweets: Tweet[] = [
   },
 
   {
+    parentId: "1",
     id: "2",
     authorName: "Grace Hopper",
     authorHandle: "gracehopper",
@@ -66,6 +68,7 @@ export const initialTweets: Tweet[] = [
   },
 
   {
+    parentId: "7",
     id: "8",
     authorName: "Donald Knuth",
     authorHandle: "donknuth",
@@ -89,3 +92,5 @@ export const initialTweets: Tweet[] = [
     createdAt: "2026-07-10T18:00:00.000Z"
   }
 ];
+
+export const mainTweets = initialTweets.filter((tweet) => tweet.parentId === undefined);

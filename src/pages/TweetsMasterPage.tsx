@@ -1,12 +1,13 @@
 import { initialTweets } from '../data/tweets';
 import TweetList from '../components/TweetList';
 
+
 function TweetMasterPage() {
+  const mainTweets = initialTweets.filter((tweet) => tweet.parentId === undefined);
   return (
-    <div>
-      <h1>Bienvenue sur le fil d'actualités</h1>
-      <p>Découvrez les tweets des personnalités.</p>
-      <TweetList tweets={initialTweets} />
+      <div>
+        <h2>Fil d'actualités</h2>
+        <TweetList tweets={mainTweets} />
     </div>
   );
 }
