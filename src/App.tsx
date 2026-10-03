@@ -1,5 +1,5 @@
 import './App.css'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 function App() {
   return (
@@ -7,6 +7,9 @@ function App() {
       <header>
         <h1>XYZ</h1>
         <p>Découvrez les tweets des personnalitéss.</p>
+        <h2>
+        / <Link to="/">Accueil</Link> | <Link to="/a-propos">À propos</Link> \
+        </h2>
       </header>
 
       <main>

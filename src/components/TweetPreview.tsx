@@ -18,7 +18,6 @@ function TweetPreview({ tweet, linkToDetail = true}: TweetPreviewProps): JSX.Ele
         isExpanded || !isTruncated
             ? tweet.content
             : `${tweet.content.slice(0, CONTENT_LIMIT)}...`;
-    const isFirstLevel = !tweet.parentId;
 
     return (
         <article>

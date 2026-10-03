@@ -2,7 +2,6 @@ import { initialTweets } from '../data/tweets';
 import { Link, useParams } from 'react-router-dom';
 import TweetPreview from '../components/TweetPreview';
 import TweetList from '../components/TweetList'
-import linktoDetail from '../components/TweetPreview';
 
 
 
@@ -29,6 +28,7 @@ function TweetDetailsPage() {
 
   return (
     <div>
+        <Link to="/">Accueil</Link> {'/ Tweet'} 
         <h2>Premier Tweet</h2>
 
         <TweetPreview tweet={tweet} linkToDetail={false}/>
