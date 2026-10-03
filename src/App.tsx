@@ -1,7 +1,13 @@
 import './App.css'
 import { Outlet, Link } from 'react-router-dom'
+import { initialTweets } from './data/tweets';
+import type { Tweet } from './types/Tweet';
+import { useState } from 'react';
+import { TweetsContext, type TweetsContextValue } from './contexts/TweetsContext';
 
 function App() {
+  const [tweets, setTweets] = useState<Array<Tweet>>(initialTweets)
+  const context: TweetsContextValue = { tweets };
   return (
     <div>
       <header>
@@ -13,7 +19,9 @@ function App() {
       </header>
 
       <main>
-        <Outlet />
+        <TweetsContext.Provider value={context}> 
+          <Outlet /> 
+        </TweetsContext.Provider>;
       </main>
     </div>
   );

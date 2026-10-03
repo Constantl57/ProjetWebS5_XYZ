@@ -1,15 +1,17 @@
-import { initialTweets } from '../data/tweets';
 import { Link, useParams } from 'react-router-dom';
 import TweetPreview from '../components/TweetPreview';
 import TweetList from '../components/TweetList'
+import { useContext } from 'react'
+import { TweetsContext } from '../contexts/TweetsContext'
 
 
 
 
 function TweetDetailsPage() {
     const {id} = useParams<{id: string}>()
-    const tweet = initialTweets.find((tweet) => tweet.id === id);
-    const replies = initialTweets.filter((tweet) => tweet.parentId === id);
+    const { tweets } = useContext(TweetsContext)!
+    const tweet = tweets.find((tweet) => tweet.id === id);
+    const replies = tweets.filter((tweet) => tweet.parentId === id);
     if (!tweet) {
         return <p>Tweet introuvable</p>;
     }
